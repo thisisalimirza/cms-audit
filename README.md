@@ -52,7 +52,7 @@ Legacy scripts from the earlier analysis (original 03_provider_pull, 04_analyses
 | Poster Figures 1 and 2 | figures/fig6_skin_code_churn.png, figures/fig8_tradeoff_poster.png | 05, 09 |
 
 ## Repository
-Repository URL: [ALI TO ADD repository URL]. License: MIT for code (LICENSE); CMS source data are US government works in the public domain. Citation metadata: CITATION.cff.
+Repository URL: https://github.com/thisisalimirza/cms-audit. License: MIT for code (LICENSE); CMS source data are US government works in the public domain. Citation metadata: CITATION.cff.
 
 ## Cautions
 Thresholds were chosen with general knowledge of the skin-substitute surge, and there is one known outcome; results are a retrospective evaluation, not validation. Flagged or captured spending is not evidence of improper spending or misconduct.
