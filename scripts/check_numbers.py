@@ -5,7 +5,7 @@ from docx import Document
 from pptx import Presentation
 ROOT = sys.argv[1] if len(sys.argv) > 1 else os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 MR = json.load(open(os.path.join(ROOT, 'tables/master_results.json')))
-DOCS = ['writeup/research_letter_JAMA_IM.docx', 'writeup/long_paper_HealthAffairsScholar.docx', 'writeup/long_paper_HealthAffairsScholar_appendix.docx',
+DOCS = ['writeup/research_letter_JAMA_IM.docx', 'writeup/long_paper_HealthAffairsScholar_SUBMISSION.docx', 'writeup/long_paper_HealthAffairsScholar_COMPLETE.docx', 'writeup/long_paper_HealthAffairsScholar_appendix.docx',
         'writeup/abstract_SGIM2027.docx', 'writeup/abstract_AcademyHealth_ARM2027.docx', 'writeup/poster/poster_SGIM2027_48x36.pptx']
 WC = json.load(open(os.path.join(ROOT, 'writeup/wordcounts.json')))
 # allowed values: every master value at 0-2 decimals, percent forms, and $M/$B conversions

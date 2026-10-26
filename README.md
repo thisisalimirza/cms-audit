@@ -56,3 +56,7 @@ Repository URL: [ALI TO ADD repository URL]. License: MIT for code (LICENSE); CM
 
 ## Cautions
 Thresholds were chosen with general knowledge of the skin-substitute surge, and there is one known outcome; results are a retrospective evaluation, not validation. Flagged or captured spending is not evidence of improper spending or misconduct.
+
+## Manuscript versions
+- writeup/long_paper_HealthAffairsScholar_COMPLETE.docx/.pdf: reader version with all figures and tables inline (Table 1, Figure 2, Table 2 and wide appendix tables in landscape sections) and the appendix exhibits at the end.
+- writeup/long_paper_HealthAffairsScholar_SUBMISSION.docx/.pdf: journal upload version; figures are supplied separately in writeup/submission_figures/.
