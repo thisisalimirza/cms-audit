@@ -1,0 +1,7 @@
+# Versions used for the reported results (Python 3.13.5)
+pandas==3.0.6
+numpy==2.5.4
+matplotlib==3.11.2
+requests==2.34.2
+python-docx==1.2.0
+# Non-Python: Node.js v20.19.2 with pptxgenjs 4.0.1 (npm install -g pptxgenjs@4.0.1), LibreOffice 25.2 (soffice, for docx/pptx to PDF), poppler-utils optional

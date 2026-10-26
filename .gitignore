@@ -1,0 +1,16 @@
+# raw and intermediate CMS data (public, but large; download per DATA.md)
+data/
+*.pkl
+provider_cache/
+*.csv.gz
+# rerun outputs
+work/
+rerun*/
+tables/
+figures/
+writeup/
+__pycache__/
+*.pyc
+.DS_Store
+MUP_*.csv
+Medicare_Physician_Other_Practitioners_*.csv

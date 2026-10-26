@@ -1,0 +1,703 @@
+== 01_build_geo.py
+year  Rndrng_Prvdr_Geo_Lvl
+2019  National                 12994
+      State                   260217
+2020  National                 13088
+      State                   255061
+2021  National                 13282
+      State                   258353
+2022  National                 13322
+      State                   257351
+2023  National                 13378
+      State                   255256
+2024  National                 13463
+      State                   254887
+dtype: int64
+         allowed        paid
+year                        
+2019  135.428578  106.295955
+2020  124.497771   97.996761
+2021  138.194212  109.843913
+2022  136.454080  107.567787
+2023  143.459866  113.481811
+2024  153.112788  120.801672
+== 02_concentration.py
+/workspace/research/medicare/repro/scripts/02_concentration.py:6: DtypeWarning: Columns (1: HCPCS_Cd) have mixed types. Specify dtype option on import or set low_memory=False.
+  STATES50 = set(pd.read_csv('data/state_by_code_year.csv').state.unique())
+latest 2024 codes >=$50M: 427 flagged: 37
+      HCPCS_Cd                         category                                                                                                                                                                                                                                                              desc       allowed           hhi  top1_share     top_state  n_states  state_coverage
+54783    Q4164          Skin substitute product                                                                                                                                                                                                                                   Helicoll, per square centimeter  6.373330e+08   3175.194954    0.549844    California      28.0        0.985486
+51824    81479                        Other lab                                                                                                                                                                                                                                     Molecular pathology procedure  5.721799e+08   4311.230455    0.623585    California      27.0        0.999983
+53096    93229          Professional/procedural                                                                                                                 Electrocardiogram (ecg) up to 30 days continuous with transmission of patient triggered events with review and report by health care professional  3.949698e+08   3237.980550    0.505321    California      48.0        0.999970
+54824    Q4262          Skin substitute product                                                                                                                                                                                                                  Dual layer impax membrane, per square centimeter  3.181804e+08   2700.912419    0.487426       Arizona      22.0        0.943196
+51840    81528                        Other lab                                                                                                                                                                                                                                 Gene analysis (colorectal cancer)  3.115742e+08   9885.891632    0.994265     Wisconsin       3.0        0.999980
+54827    Q4265          Skin substitute product                                                                                                                                                                                                                                 Neostim tl, per square centimeter  2.741642e+08   2683.554255    0.484826    California      16.0        0.904656
+54834    Q4276          Skin substitute product                                                                                                                                                                                                                                      Orion, per square centimeter  2.307958e+08   2074.578508    0.287325      Oklahoma      10.0        0.958293
+54835    Q4277          Skin substitute product                                                                                                                                                                                                              Woundplus membrane or e-graft, per square centimeter  2.196538e+08   2992.967203    0.496106       Florida      12.0        0.967581
+54813    Q4238          Skin substitute product                                                                                                                                                                                                                                  Derm-maxx, per square centimeter  2.041954e+08   3989.013868    0.604928    California      13.0        0.930833
+54818    Q4250          Skin substitute product                                                                                                                                                                                                                                Amnioamp-mp, per square centimeter  1.668038e+08   2429.102380    0.293457    California       8.0        0.960671
+54857    Q4326          Skin substitute product                                                                                                                                                                                                                                  Woundplus, per square centimeter  1.495910e+08   3063.478150    0.462590       Florida      10.0        0.911415
+54858    Q4331          Skin substitute product                                                                                                                                                                                                                              Axolotl graft, per square centimeter  1.273379e+08  10000.000000    1.000000       Florida       1.0        1.000000
+54237    J1300  Drug (Part B, physician-billed)                                                                                                                                                                                                                                      Injection, eculizumab, 10 mg  1.272145e+08   1241.176262    0.163062         Texas      10.0        0.674573
+54839    Q4281          Skin substitute product                                                                                                                                                                                                                   Barrera sl or barrera dl, per square centimeter  1.243042e+08   1811.362871    0.271854         Texas      10.0        0.870049
+53103    93247          Professional/procedural                                                                                                                                                                                         Heart rhythm analysis and report of continous external ekg over 8-15 days  1.135053e+08   7278.057303    0.848648    California      21.0        0.999850
+54114    J0225  Drug (Part B, physician-billed)                                                                                                                                                                                                                                       Injection, vutrisiran, 1 mg  9.913103e+07   1436.638546    0.254654      New York      10.0        0.696532
+45845    0242U                      PLA lab (U)                                                                                                                            Gene analysis of 55-74 genes associated with solid organ cancer in cell-free circulating dna, targeted genomic sequence analysis panel  9.886196e+07  10000.000000    1.000000    California       1.0        1.000000
+45862    0326U                      PLA lab (U)                                                                                                            Targeted genomic sequence analysis of 83 or more genes in cell free circulating dna for detection of abnormalities associated with solid organ cancers  9.634704e+07  10000.000000    1.000000    California       1.0        1.000000
+51846    81542                        Other lab                                                                                                                                                                                                Mrna gene expression analysis of 22 genes in prostate tumor tissue  9.479871e+07  10000.000000    1.000000    California       1.0        0.999960
+51835    81519                        Other lab                                                                                                                                                                                                            Test for detecting genes associated with breast cancer  9.382313e+07  10000.000000    1.000000    California       1.0        0.999840
+45870    0340U                      PLA lab (U)                                                                                                                                                                                                    Dna assays for detection of minimal residual disease in cancer  9.059203e+07  10000.000000    1.000000    California       1.0        1.000000
+54812    Q4236          Skin substitute product                                                                                                                                                                                                                                  Carepatch, per square centimeter  9.013420e+07   3674.387869    0.593377    California      16.0        0.945624
+51792    81419                        Other lab                                                                                                                                                                                              Gene analysis panel for evaluation of genes associated with epilepsy  7.290943e+07   3498.307297    0.440606         Texas       9.0        0.999967
+53099    93243          Professional/procedural                                                                                                                                                                   Heart rhythm analysis and report of continous external ekg over more than 48 hours up to 7 days  7.147804e+07   4144.450652    0.602920    California      25.0        0.999881
+54486    J7214  Drug (Part B, physician-billed)                                                                                                                                                               Injection, factor viii/von willebrand factor complex, recombinant (altuviiio), per factor viii i.u.  7.071116e+07   4429.476271    0.603559    California       3.0        0.437402
+54856    Q4316          Skin substitute product                                                                                                                                                                                                                                 Amchoplast, per square centimeter  6.919043e+07   4292.162831    0.614478      Illinois       4.0        0.905044
+53931    G0249          Professional/procedural  Provision of test materials and equipment for home inr monitoring of patient with either mechanical heart valve(s), chronic atrial fibrillation, or venous thromboembolism who meets medicare coverage criteria; includes: provision of materials for use in the  6.908162e+07   7914.687685    0.887278    California      17.0        0.999854
+51841    81529                        Other lab                                                                                                                                                                                                   Mrna gene analysis of 31 genes in skin melanoma tissue specimen  6.884190e+07  10000.000000    1.000000       Arizona       1.0        1.000000
+54474    J7189  Drug (Part B, physician-billed)                                                                                                                                                                                     Factor viia (antihemophilic factor, recombinant), (novoseven rt), 1 microgram  6.525850e+07  10000.000000    1.000000    California       1.0        0.146339
+54479    J7202  Drug (Part B, physician-billed)                                                                                                                                                                                     Injection, factor ix, albumin fusion protein, (recombinant), idelvion, 1 i.u.  6.251047e+07   5343.852337    0.631121    California       2.0        0.440082
+45860    0315U                      PLA lab (U)  Mrna gene expression profiling by real-time polymerase chain reaction (rt-pcr) of 40 genes (34 content and 6 housekeeping) associated with squamous cell carcinoma of skin in formalin-fixed paraffin-embedded (ffpe) tissue specimen, algorithm reported as ben  6.018425e+07  10000.000000    1.000000  Pennsylvania       1.0        1.000000
+54850    Q4301          Skin substitute product                                                                                                                                                                                                                            Activate matrix, per square centimeter  5.967214e+07   5972.050893    0.752200      Oklahoma       3.0        0.590942
+54478    J7201  Drug (Part B, physician-billed)                                                                                                                                                                                          Injection, factor ix, fc fusion protein, (recombinant), alprolix, 1 i.u.  5.936219e+07   5046.065442    0.547992  Pennsylvania       2.0        0.530365
+51813    81456                        Other lab                                                                                                                                                   Genomic sequence analysis panel of rna of 51 or more genes associated with blood and lymphatic system disorders  5.737102e+07   6928.012141    0.823932      Illinois       6.0        0.999302
+51804    81440                        Other lab                                                                                                                                                                                                                                          Test for detecting genes  5.666227e+07   5167.199893    0.630400       Florida       4.0        1.000000
+51806    81443                        Other lab                                                                                                                                                               Genomic sequence analysis panel for severe inherited conditions with sequencing of 15 or more genes  5.480082e+07   4709.329662    0.516089       Florida       7.0        0.999778
+54476    J7192  Drug (Part B, physician-billed)                                                                                                                                                                                Factor viii (antihemophilic factor, recombinant) per i.u., not otherwise specified  5.380122e+07   2600.805472    0.382380  Pennsylvania      10.0        0.728807
+                                 size           sum
+category                                           
+Drug (Part B, physician-billed)     7  5.379891e+08
+Other lab                           9  1.382961e+09
+PLA lab (U)                         4  3.459853e+08
+Professional/procedural             4  6.490348e+08
+Skin substitute product            13  2.671356e+09
+== 03_lookback.py
+{
+ "lookback_2021": {
+  "n_composite_nonlab": 20,
+  "n_composite_skin": 9,
+  "skin_codes_flagged": [
+   "Q4206",
+   "Q4217",
+   "Q4180",
+   "Q4173",
+   "Q4178",
+   "Q4162",
+   "Q4205",
+   "Q4215",
+   "Q4244"
+  ],
+  "nonskin_nonlab_flagged": [
+   "93247",
+   "J1454",
+   "A9513",
+   "93243",
+   "J9227",
+   "J1556",
+   "J9349",
+   "Q5123",
+   "J1095",
+   "J9281",
+   "J9037"
+  ],
+  "n_skin_codes_ge10M_t": 19,
+  "skin_flagged_allowed_t_M": 325.9,
+  "skin_flagged_allowed_2024_M": 1485.4,
+  "share_of_2024_skin_spend_in_flagged_codes": 0.147,
+  "share_of_2024_skin_spend_in_codes_existing_at_t": 0.205,
+  "nonskin_flagged_ratio_2024_to_t": 2.47,
+  "category_level_skin_allowed_t_M": 1075.8,
+  "category_level_skin_growth_t": 1.169,
+  "category_skin_hhi_t": null
+ },
+ "lookback_2022": {
+  "n_composite_nonlab": 19,
+  "n_composite_skin": 10,
+  "skin_codes_flagged": [
+   "Q4217",
+   "Q4158",
+   "Q4173",
+   "Q4252",
+   "Q4188",
+   "Q4194",
+   "Q4248",
+   "Q4227",
+   "Q4132",
+   "Q4247"
+  ],
+  "nonskin_nonlab_flagged": [
+   "93247",
+   "93243",
+   "G2023",
+   "J9316",
+   "G2024",
+   "J1599",
+   "A9699",
+   "J9298",
+   "J1823"
+  ],
+  "n_skin_codes_ge10M_t": 25,
+  "skin_flagged_allowed_t_M": 443.0,
+  "skin_flagged_allowed_2024_M": 128.5,
+  "share_of_2024_skin_spend_in_flagged_codes": 0.013,
+  "share_of_2024_skin_spend_in_codes_existing_at_t": 0.365,
+  "nonskin_flagged_ratio_2024_to_t": 1.43,
+  "category_level_skin_allowed_t_M": 1572.7,
+  "category_level_skin_growth_t": 0.462,
+  "category_skin_hhi_t": null
+ },
+ "skin_category_by_year": [
+  {
+   "year": 2019,
+   "allowed_M": 189.226,
+   "hhi": 850.048,
+   "top5_state_share": 0.501,
+   "growth": NaN
+  },
+  {
+   "year": 2020,
+   "allowed_M": 496.032,
+   "hhi": 676.226,
+   "top5_state_share": 0.481,
+   "growth": 1.621
+  },
+  {
+   "year": 2021,
+   "allowed_M": 1075.811,
+   "hhi": 718.314,
+   "top5_state_share": 0.498,
+   "growth": 1.169
+  },
+  {
+   "year": 2022,
+   "allowed_M": 1572.684,
+   "hhi": 835.142,
+   "top5_state_share": 0.542,
+   "growth": 0.462
+  },
+  {
+   "year": 2023,
+   "allowed_M": 4436.652,
+   "hhi": 1030.705,
+   "top5_state_share": 0.645,
+   "growth": 1.821
+  },
+  {
+   "year": 2024,
+   "allowed_M": 10076.732,
+   "hhi": 1107.424,
+   "top5_state_share": 0.627,
+   "growth": 1.271
+  }
+ ],
+ "grid_2021": {
+  "n_combos": 81,
+  "combos_flagging_any_skin": 81,
+  "n_flagged_range": [
+   2,
+   56
+  ],
+  "n_skin_range": [
+   1,
+   18
+  ],
+  "median_share_flagged_skin": 0.484
+ },
+ "grid_2022": {
+  "n_combos": 81,
+  "combos_flagging_any_skin": 81,
+  "n_flagged_range": [
+   5,
+   61
+  ],
+  "n_skin_range": [
+   4,
+   19
+  ],
+  "median_share_flagged_skin": 0.533
+ },
+ "suppression": {
+  "n_ge50M_2024": 427,
+  "median_state_coverage": 1.0,
+  "share_coverage_lt90": 0.04,
+  "coverage_lt90_by_category": {
+   "Drug (Part B, physician-billed)": 13,
+   "Skin substitute product": 4
+  },
+  "skin_median_state_coverage_2024": 0.959,
+  "flagged_2024_robust_to_coverage_ge90": 28,
+  "flagged_2024_all": 37
+ },
+ "recon_2019": {
+  "allowed_M": 189.2,
+  "paid_M": 150.7,
+  "by_pos_paid_M": {
+   "F": 10.9,
+   "O": 139.8
+  },
+  "n_codes": 41,
+  "state_sum_paid_M": 179.1
+ }
+}
+       t                rule  stratum  n_flagged  n_skin_flagged  flagged_allowed_t_M  flagged_allowed_2024_M  flagged_ratio_2024_to_t  flagged_median_code_ratio  unflagged_ratio_2024_to_t  unflagged_median_code_ratio  share_flagged_doubling  share_unflagged_doubling  n_unflagged_ge10M
+0   2020           composite  non-lab         14               5               514.32                 1080.29                     2.10                       1.31                       1.04                         0.98                    0.29                      0.05                928
+1   2020           composite      lab          6               0               204.24                  131.30                     0.64                       0.01                       1.10                         1.08                    0.17                      0.04                 94
+2   2020         growth_only  non-lab         64               9              4600.43                 4476.46                     0.97                       0.77                       1.05                         0.99                    0.27                      0.04                878
+3   2020         growth_only      lab         18               0               649.73                  866.06                     1.33                       1.23                       1.06                         1.07                    0.22                      0.01                 82
+4   2020  concentration_only  non-lab         55               6              1915.19                 2456.95                     1.28                       1.09                       1.04                         0.98                    0.11                      0.05                887
+5   2020  concentration_only      lab         25               0              1417.02                 1332.91                     0.94                       0.76                       1.14                         1.09                    0.04                      0.05                 75
+6   2021           composite  non-lab         20               9               499.11                 1913.43                     3.83                       0.89                       0.96                         0.94                    0.30                      0.04                975
+7   2021           composite      lab         19               0               678.82                  426.44                     0.63                       0.00                       1.01                         1.02                    0.16                      0.06                 95
+8   2021         growth_only  non-lab         77              15              7390.52                 8392.48                     1.14                       0.76                       0.96                         0.94                    0.26                      0.03                918
+9   2021         growth_only      lab         25               0               869.79                  692.88                     0.80                       0.97                       1.00                         1.02                    0.28                      0.02                 89
+10  2021  concentration_only  non-lab         57              10              1987.23                 3481.94                     1.75                       0.99                       0.96                         0.94                    0.12                      0.04                938
+11  2021  concentration_only      lab         36               0              2099.22                 1671.08                     0.80                       0.82                       1.05                         1.02                    0.08                      0.08                 78
+12  2022           composite  non-lab         19              10               718.54                  523.60                     0.73                       0.20                       1.01                         0.98                    0.11                      0.04                979
+13  2022           composite      lab          9               0               256.81                  346.23                     1.35                       1.52                       1.09                         1.04                    0.33                      0.03                102
+14  2022         growth_only  non-lab         75              14              6669.34                 8705.66                     1.31                       1.42                       1.00                         0.98                    0.31                      0.02                923
+15  2022         growth_only      lab         16               0               392.57                  525.86                     1.34                       1.40                       1.08                         1.04                    0.25                      0.02                 95
+16  2022  concentration_only  non-lab         65              15              2350.84                 3302.36                     1.40                       0.95                       1.01                         0.98                    0.05                      0.04                933
+17  2022  concentration_only      lab         30               0              1612.09                 1850.96                     1.15                       1.12                       1.08                         1.04                    0.10                      0.04                 81
+18  2023           composite  non-lab         29              16              2852.84                 2958.68                     1.04                       1.43                       1.01                         1.00                    0.48                      0.01                965
+19  2023           composite      lab         17               0               594.75                  642.20                     1.08                       1.26                       1.06                         1.03                    0.12                      0.00                104
+20  2023         growth_only  non-lab         92              23             12419.06                13802.66                     1.11                       1.36                       1.00                         0.99                    0.23                      0.01                902
+21  2023         growth_only      lab         18               0               615.70                  678.54                     1.10                       1.29                       1.06                         1.03                    0.11                      0.00                103
+22  2023  concentration_only  non-lab         78              23              4886.77                 4644.49                     0.95                       1.00                       1.01                         1.00                    0.18                      0.01                916
+23  2023  concentration_only      lab         44               0              2166.90                 2356.78                     1.09                       1.10                       1.05                         1.03                    0.05                      0.00                 77
+== 04_lookback_figure.py
+== 05_churn_figure.py
+vintage  2019 or earlier  2020  2021  2022  2023  2024
+year                                                  
+2019                0.19  0.00  0.00  0.00  0.00  0.00
+2020                0.41  0.08  0.00  0.00  0.00  0.00
+2021                0.59  0.33  0.15  0.00  0.00  0.00
+2022                0.44  0.30  0.77  0.06  0.00  0.00
+2023                0.33  0.61  0.95  0.20  2.35  0.00
+2024                0.28  1.54  0.28  1.61  3.23  3.15
+== 06_product_classes.py
+named classes 32 codes in named classes 2064
+       t  level                             rule  n_flagged  flagged_allowed_t_M  flagged_allowed_2024_M  flagged_ratio_2024_to_t  unflagged_ratio_2024_to_t  n_doubling_classes  doubling_classes_2024_M  coverage_of_doubling_class_2024_spend  coverage_of_2024_skin_spend skin_class_flagged
+0   2020   code                        composite         14              514.321                1080.288                    2.100                      1.042                  37                21109.482                                  0.039                        0.003               None
+1   2020   code                      growth_only         64             4600.429                4476.463                    0.973                      1.050                  37                21109.482                                  0.085                        0.007               None
+2   2020  class                        composite          5              117.713                 846.604                    7.192                      1.210                  37                21109.482                                  0.039                        0.000              False
+3   2020  class                      growth_only         38             3812.860               12591.399                    3.302                      1.142                  37                21109.482                                  0.539                        1.000               True
+4   2020  class  composite_wmean_hhi_exploratory          7              877.991               11201.513                   12.758                      1.124                  37                21109.482                                  0.517                        1.000               True
+5   2021   code                        composite         20              499.109                1913.430                    3.834                      0.957                  28                18799.065                                  0.093                        0.147               None
+6   2021   code                      growth_only         77             7390.519                8392.482                    1.136                      0.958                  28                18799.065                                  0.176                        0.153               None
+7   2021  class                        composite          6              131.783                 343.666                    2.608                      1.098                  28                18799.065                                  0.015                        0.000              False
+8   2021  class                      growth_only         44             5061.923               12773.591                    2.523                      1.039                  28                18799.065                                  0.638                        1.000               True
+9   2021  class  composite_wmean_hhi_exploratory          7             1207.594               10420.399                    8.629                      1.026                  28                18799.065                                  0.551                        1.000               True
+10  2022   code                        composite         19              718.542                 523.598                    0.729                      1.015                  19                15614.023                                  0.012                        0.013               None
+11  2022   code                      growth_only         75             6669.337                8705.658                    1.305                      0.996                  19                15614.023                                  0.109                        0.030               None
+12  2022  class                        composite          6              265.268                 299.395                    1.129                      1.114                  19                15614.023                                  0.004                        0.000              False
+13  2022  class                      growth_only         34             3608.240                3089.037                    0.856                      1.122                  19                15614.023                                  0.066                        0.000              False
+14  2022  class  composite_wmean_hhi_exploratory          7              336.347                 601.117                    1.787                      1.112                  19                15614.023                                  0.023                        0.000              False
+15  2023   code                        composite         29             2852.835                2958.676                    1.037                      1.006                   8                10768.937                                  0.239                        0.237               None
+16  2023   code                      growth_only         92            12419.058               13802.655                    1.111                      0.996                   8                10768.937                                  0.408                        0.411               None
+17  2023  class                        composite          7              137.124                 331.191                    2.415                      1.062                   8                10768.937                                  0.025                        0.000              False
+18  2023  class                      growth_only         39            11180.819               15996.325                    1.431                      1.028                   8                10768.937                                  0.964                        1.000               True
+19  2023  class  composite_wmean_hhi_exploratory          7             4526.328               10273.347                    2.270                      1.019                   8                10768.937                                  0.948                        1.000               True
+       year       allowed          hhi  wmean_code_hhi  nat_provs  n_codes
+44994  2019  1.892260e+08   850.048146     2170.695164       6829       41
+44995  2020  4.960324e+08   676.226006     1768.780358       9847       56
+44996  2021  1.075811e+09   718.313694     1643.977316      13823       72
+44997  2022  1.572684e+09   835.142243     1709.757486      13807       71
+44998  2023  4.436652e+09  1030.705149     2093.446516      18313       84
+44999  2024  1.007673e+10  1107.423656     2162.253707      23951      105
+                                                                 level stratum                                           class       allowed          prev    growth_pct           hhi  nat_provs       top_state  top_state_share
+unit                                                                                                                                                                                                                              
+J9029 (unclassified, own class)                                  class   other                 J9029 (unclassified, own class)  2.166362e+07  1.130518e+06   1816.256501   1915.548364        177         Arizona         0.294881
+J9061 (unclassified, own class)                                  class   other                 J9061 (unclassified, own class)  2.040752e+07  8.912875e+06    128.966698   2452.837870        537      California         0.338537
+77600 (unclassified, own class)                                  class   other                 77600 (unclassified, own class)  1.877759e+07  7.145588e+06    162.785835   5454.539196         92      California         0.729084
+J1305 (unclassified, own class)                                  class   other                 J1305 (unclassified, own class)  1.297341e+07  4.882942e+06    165.688403           NaN         61             NaN              NaN
+J0638 (unclassified, own class)                                  class   other                 J0638 (unclassified, own class)  1.293478e+07  6.606923e+06     95.776075   3332.222065        163        Maryland         0.430914
+0394T (unclassified, own class)                                  class   other                 0394T (unclassified, own class)  1.285415e+07  7.788602e+06     65.037922   3050.091756        148      California         0.507623
+Skin substitute products         class (exploratory weighted-HHI only)    skin                        Skin substitute products  1.007673e+10  4.436652e+09    127.124682   1107.423656      23951      California         0.235903
+Remote therapeutic monitoring    class (exploratory weighted-HHI only)   other                   Remote therapeutic monitoring  2.416351e+07  1.320449e+07     82.994612   1008.412190      17519     Connecticut         0.250147
+Q4275                                                             code    skin                        Skin substitute products  8.991759e+08  0.000000e+00           NaN   2205.797530        418         Florida         0.348692
+Q4191                                                             code    skin                        Skin substitute products  7.316571e+08  2.410120e+06  30257.707753   1697.274665       1089      California         0.357642
+Q4164                                                             code    skin                        Skin substitute products  6.373330e+08  5.098261e+07   1150.098737   3175.194954        723      California         0.549844
+87798                                                             code     lab                        Other laboratory (8xxxx)  4.378413e+08  2.896323e+08     51.171433   1506.494204       2828           Texas         0.317980
+Q4265                                                             code    skin                        Skin substitute products  2.741642e+08  0.000000e+00           NaN   2683.554255        428      California         0.484826
+Q4303                                                             code    skin                        Skin substitute products  2.328987e+08  0.000000e+00           NaN   1986.758636        167         Florida         0.283593
+Q4239                                                             code    skin                        Skin substitute products  2.316578e+08  3.760848e+05  61497.213162   1949.776693        585      California         0.390596
+Q4276                                                             code    skin                        Skin substitute products  2.307958e+08  8.221215e+07    180.731973   2074.578508        201        Oklahoma         0.287325
+Q4277                                                             code    skin                        Skin substitute products  2.196538e+08  6.020242e+07    264.858696   2992.967203        263         Florida         0.496106
+Q4238                                                             code    skin                        Skin substitute products  2.041954e+08  3.703441e+06   5413.666852   3989.013868        290      California         0.604928
+Q4250                                                             code    skin                        Skin substitute products  1.668038e+08  2.531500e+07    558.913054   2429.102380        285      California         0.293457
+Q4295                                                             code    skin                        Skin substitute products  1.577182e+08  0.000000e+00           NaN   2154.840951        286         Florida         0.413154
+Q4326                                                             code    skin                        Skin substitute products  1.495910e+08  0.000000e+00           NaN   3063.478150        187         Florida         0.462590
+Q4331                                                             code    skin                        Skin substitute products  1.273379e+08  0.000000e+00           NaN  10000.000000         13         Florida         1.000000
+0326U                                                             code     lab               PLA proprietary lab tests (####U)  9.634704e+07  5.935214e+07     62.331204  10000.000000          1      California         1.000000
+99489                                                             code   other           Chronic and principal care management  9.621260e+07  5.801507e+07     65.840699   1502.788100       7917  South Carolina         0.313601
+0340U                                                             code     lab               PLA proprietary lab tests (####U)  9.059203e+07  5.289884e+07     71.255238  10000.000000          1      California         1.000000
+81419                                                             code     lab  Molecular pathology and genomic panels (81xxx)  7.290943e+07  1.457031e+07    400.397233   3498.307297         58           Texas         0.440606
+J7214                                                             code   other          Hematology (factors, ESAs, G-CSF, TPO)  7.071116e+07  1.057409e+07    568.720998   4429.476271         77      California         0.603559
+Q4316                                                             code    skin                        Skin substitute products  6.919043e+07  0.000000e+00           NaN   4292.162831         36        Illinois         0.614478
+0315U                                                             code     lab               PLA proprietary lab tests (####U)  6.018425e+07  3.200245e+07     88.061384  10000.000000          1    Pennsylvania         1.000000
+Q4301                                                             code    skin                        Skin substitute products  5.967214e+07  0.000000e+00           NaN   5972.050893         32        Oklahoma         0.752200
+81440                                                             code     lab  Molecular pathology and genomic panels (81xxx)  5.666227e+07  7.660817e+06    639.637412   5167.199893         32         Florida         0.630400
+81443                                                             code     lab  Molecular pathology and genomic panels (81xxx)  5.480082e+07  5.978430e+06    816.642332   4709.329662         60         Florida         0.516089
+81459                                                             code     lab  Molecular pathology and genomic panels (81xxx)  4.948646e+07  0.000000e+00           NaN   8696.710896         19        Illinois         0.931799
+Q5127                                                             code   other          Hematology (factors, ESAs, G-CSF, TPO)  4.600726e+07  8.237881e+06    458.484154   2872.599111        842         Florida         0.478769
+Q4268                                                             code    skin                        Skin substitute products  4.593663e+07  1.715416e+06   2577.871572   2360.358110         87        Oklahoma         0.411465
+J1554                                                             code   other                                Immune globulins  4.562732e+07  1.873406e+07    143.552765   2072.093894        120           Texas         0.312499
+Q4267                                                             code    skin                        Skin substitute products  4.358494e+07  9.899259e+05   4302.849231   3231.412524        156      California         0.490615
+81464                                                             code     lab  Molecular pathology and genomic panels (81xxx)  4.189273e+07  0.000000e+00           NaN   9881.166153          3        Illinois         0.994023
+Q4296                                                             code    skin                        Skin substitute products  3.680397e+07  0.000000e+00           NaN   8393.399554         38        Oklahoma         0.911910
+87631                                                             code     lab                        Other laboratory (8xxxx)  3.592486e+07  2.125533e+07     69.015813   1942.099974       3030           Texas         0.389011
+Q4313                                                             code    skin                        Skin substitute products  3.497676e+07  0.000000e+00           NaN  10000.000000         40         Florida         1.000000
+Q4332                                                             code    skin                        Skin substitute products  3.149024e+07  0.000000e+00           NaN   2823.424734        200         Florida         0.477471
+Q4283                                                             code    skin                        Skin substitute products  3.128775e+07  1.257609e+07    148.787607   1900.734217        157         Florida         0.319627
+Q4193                                                             code    skin                        Skin substitute products  2.976697e+07  0.000000e+00           NaN   2567.136881         85      California         0.275565
+0108U                                                             code     lab               PLA proprietary lab tests (####U)  2.699096e+07  1.255439e+07    114.992272  10000.000000          2    Pennsylvania         1.000000
+Q4280                                                             code    skin                        Skin substitute products  2.679257e+07  0.000000e+00           NaN   7301.346978         48      California         0.845637
+J9333                                                             code   other                  Complement and FcRn inhibitors  2.599584e+07  0.000000e+00           NaN   3409.340002        225           Texas         0.393313
+Q4266                                                             code    skin                        Skin substitute products  2.552842e+07  0.000000e+00           NaN   5540.149044         92       Tennessee         0.715899
+Q4225                                                             code    skin                        Skin substitute products  2.393875e+07  2.789278e+06    758.241860   5335.377722         39        Michigan         0.657519
+A2019                                                             code    skin                        Skin substitute products  2.383522e+07  2.780522e+06    757.221039   2404.673587        244          Kansas         0.409967
+J9029                                                             code   other                 J9029 (unclassified, own class)  2.166362e+07  1.130518e+06   1816.256501   1915.548364        177         Arizona         0.294881
+Q4289                                                             code    skin                        Skin substitute products  2.143894e+07  0.000000e+00           NaN   2271.418032         38         Florida         0.301583
+J9061                                                             code   other                 J9061 (unclassified, own class)  2.040752e+07  8.912875e+06    128.966698   2452.837870        537      California         0.338537
+Q4161                                                             code    skin                        Skin substitute products  1.924086e+07  3.929106e+05   4797.005991   3234.513219         94           Texas         0.486672
+Q4256                                                             code    skin                        Skin substitute products  1.908468e+07  4.744231e+06    302.271252   4516.738259         57          Kansas         0.587974
+77600                                                             code   other                 77600 (unclassified, own class)  1.877759e+07  7.145588e+06    162.785835   5454.539196         92      California         0.729084
+81325                                                             code     lab  Molecular pathology and genomic panels (81xxx)  1.732116e+07  8.550805e+06    102.567547   3745.225519         49           Texas         0.571977
+J9321                                                             code   other                      Bispecific T-cell engagers  1.710419e+07  0.000000e+00           NaN   3369.303349        301       Minnesota         0.381642
+Q4309                                                             code    skin                        Skin substitute products  1.642624e+07  0.000000e+00           NaN   3524.253977         63        Maryland         0.431948
+Q4297                                                             code    skin                        Skin substitute products  1.628666e+07  0.000000e+00           NaN   4595.817046         38        Oklahoma         0.543785
+Q4264                                                             code    skin                        Skin substitute products  1.593864e+07  3.949653e+06    303.545329  10000.000000          5           Texas         1.000000
+A2022                                                             code    skin                        Skin substitute products  1.514252e+07  0.000000e+00           NaN   6102.207975         27      New Jersey         0.734756
+Q4279                                                             code    skin                        Skin substitute products  1.442144e+07  0.000000e+00           NaN  10000.000000         27        Illinois         1.000000
+J1302                                                             code   other                  Complement and FcRn inhibitors  1.375331e+07  8.922026e+06     54.150043   5060.953473        205         Florida         0.555206
+Q4263                                                             code    skin                        Skin substitute products  1.308812e+07  3.544566e+06    269.244514   7094.356113         42      California         0.833586
+Q4298                                                             code    skin                        Skin substitute products  1.299634e+07  0.000000e+00           NaN   4169.181385         50      California         0.533880
+J1305                                                             code   other                 J1305 (unclassified, own class)  1.297341e+07  4.882942e+06    165.688403           NaN         61             NaN              NaN
+J0638                                                             code   other                 J0638 (unclassified, own class)  1.293478e+07  6.606923e+06     95.776075   3332.222065        163        Maryland         0.430914
+0394T                                                             code   other                 0394T (unclassified, own class)  1.285415e+07  7.788602e+06     65.037922   3050.091756        148      California         0.507623
+0026U                                                             code     lab               PLA proprietary lab tests (####U)  1.269162e+07  1.779758e+06    613.109143  10000.000000          2        New York         1.000000
+J3055                                                             code   other                      Bispecific T-cell engagers  1.218790e+07  0.000000e+00           NaN   2545.520324        245       Tennessee         0.279522
+81418                                                             code     lab  Molecular pathology and genomic panels (81xxx)  1.107847e+07  3.315202e+06    234.171920   2173.043836         58      New Jersey         0.370214
+Q4310                                                             code    skin                        Skin substitute products  1.076088e+07  0.000000e+00           NaN   9296.545258         31         Florida         0.963495
+A2024                                                             code    skin                        Skin substitute products  1.015530e+07  0.000000e+00           NaN  10000.000000         20         Florida         1.000000
+== 07_watchlist_providers.py
+== 08_watchlist_table_figure.py
+{
+ "n_watch_nonlab_codes": 52,
+ "n_watch_skin_codes": 38,
+ "n_watch_other_codes": 14,
+ "n_watch_lab_codes": 14,
+ "watch_nonlab_allowed_2024_M": 5358.0,
+ "watch_skin_allowed_2024_M": 4930.8,
+ "watch_other_allowed_2024_M": 427.2,
+ "watch_lab_allowed_2024_M": 1064.7,
+ "n_new_codes_nonlab": 25,
+ "n_2023_flags": 29,
+ "n_2023_flags_reflagged_2024": 7,
+ "median_top10_share_skin": 1.0,
+ "median_top10_share_other": 0.605,
+ "top10": [
+  {
+   "unit": "Q4275",
+   "plain_description": "Esano aca, per sq cm",
+   "allowed_2024_M": 899.176,
+   "allowed_2023_M": 0.0,
+   "growth_pct": NaN,
+   "state_hhi": 2205.798,
+   "national_providers": 418,
+   "top10_provider_share": 0.629
+  },
+  {
+   "unit": "Q4191",
+   "plain_description": "Restorigin, per sq cm",
+   "allowed_2024_M": 731.657,
+   "allowed_2023_M": 2.41,
+   "growth_pct": 30257.708,
+   "state_hhi": 1697.275,
+   "national_providers": 1089,
+   "top10_provider_share": 0.288
+  },
+  {
+   "unit": "Q4164",
+   "plain_description": "Helicoll, per sq cm",
+   "allowed_2024_M": 637.333,
+   "allowed_2023_M": 50.983,
+   "growth_pct": 1150.099,
+   "state_hhi": 3175.195,
+   "national_providers": 723,
+   "top10_provider_share": 0.75
+  },
+  {
+   "unit": "Q4265",
+   "plain_description": "Neostim tl, per sq cm",
+   "allowed_2024_M": 274.164,
+   "allowed_2023_M": 0.0,
+   "growth_pct": NaN,
+   "state_hhi": 2683.554,
+   "national_providers": 428,
+   "top10_provider_share": 0.912
+  },
+  {
+   "unit": "Q4303",
+   "plain_description": "Complete aa, per sq cm",
+   "allowed_2024_M": 232.899,
+   "allowed_2023_M": 0.0,
+   "growth_pct": NaN,
+   "state_hhi": 1986.759,
+   "national_providers": 167,
+   "top10_provider_share": 0.974
+  },
+  {
+   "unit": "Q4239",
+   "plain_description": "Amnio-maxx or amnio-maxx lite, per sq cm",
+   "allowed_2024_M": 231.658,
+   "allowed_2023_M": 0.376,
+   "growth_pct": 61497.213,
+   "state_hhi": 1949.777,
+   "national_providers": 585,
+   "top10_provider_share": 0.612
+  },
+  {
+   "unit": "Q4276",
+   "plain_description": "Orion, per sq cm",
+   "allowed_2024_M": 230.796,
+   "allowed_2023_M": 82.212,
+   "growth_pct": 180.732,
+   "state_hhi": 2074.579,
+   "national_providers": 201,
+   "top10_provider_share": 0.889
+  },
+  {
+   "unit": "Q4277",
+   "plain_description": "Woundplus membrane or e-graft, per sq cm",
+   "allowed_2024_M": 219.654,
+   "allowed_2023_M": 60.202,
+   "growth_pct": 264.859,
+   "state_hhi": 2992.967,
+   "national_providers": 263,
+   "top10_provider_share": 0.829
+  },
+  {
+   "unit": "Q4238",
+   "plain_description": "Derm-maxx, per sq cm",
+   "allowed_2024_M": 204.195,
+   "allowed_2023_M": 3.703,
+   "growth_pct": 5413.667,
+   "state_hhi": 3989.014,
+   "national_providers": 290,
+   "top10_provider_share": 0.575
+  },
+  {
+   "unit": "Q4250",
+   "plain_description": "Amnioamp-mp, per sq cm",
+   "allowed_2024_M": 166.804,
+   "allowed_2023_M": 25.315,
+   "growth_pct": 558.913,
+   "state_hhi": 2429.102,
+   "national_providers": 285,
+   "top10_provider_share": 0.702
+  }
+ ],
+ "other_codes": [
+  {
+   "unit": "99489",
+   "plain_description": "Complex chronic care management services for two or more chronic conditions, eac\u2026",
+   "allowed_2024_M": 96.213,
+   "growth_pct": 65.841,
+   "state_hhi": 1502.788,
+   "national_providers": 7917,
+   "top10_provider_share": 0.232
+  },
+  {
+   "unit": "J7214",
+   "plain_description": "Injection, factor viii/von willebrand factor complex, recombinant (altuviiio), p\u2026",
+   "allowed_2024_M": 70.711,
+   "growth_pct": 568.721,
+   "state_hhi": 4429.476,
+   "national_providers": 77,
+   "top10_provider_share": NaN
+  },
+  {
+   "unit": "Q5127",
+   "plain_description": "Injection, pegfilgrastim-fpgk (stimufend), biosimilar, 0.5 mg",
+   "allowed_2024_M": 46.007,
+   "growth_pct": 458.484,
+   "state_hhi": 2872.599,
+   "national_providers": 842,
+   "top10_provider_share": 0.177
+  },
+  {
+   "unit": "J1554",
+   "plain_description": "Injection, immune globulin (asceniv), 500 mg",
+   "allowed_2024_M": 45.627,
+   "growth_pct": 143.553,
+   "state_hhi": 2072.094,
+   "national_providers": 120,
+   "top10_provider_share": 1.0
+  },
+  {
+   "unit": "J9333",
+   "plain_description": "Injection, rozanolixizumab-noli, 1 mg",
+   "allowed_2024_M": 25.996,
+   "growth_pct": NaN,
+   "state_hhi": 3409.34,
+   "national_providers": 225,
+   "top10_provider_share": NaN
+  },
+  {
+   "unit": "J9029",
+   "plain_description": "Intravesical instillation, nadofaragene firadenovec-vncg, per therapeutic dose",
+   "allowed_2024_M": 21.664,
+   "growth_pct": 1816.257,
+   "state_hhi": 1915.548,
+   "national_providers": 177,
+   "top10_provider_share": NaN
+  },
+  {
+   "unit": "J9061",
+   "plain_description": "Injection, amivantamab-vmjw, 2 mg",
+   "allowed_2024_M": 20.408,
+   "growth_pct": 128.967,
+   "state_hhi": 2452.838,
+   "national_providers": 537,
+   "top10_provider_share": NaN
+  },
+  {
+   "unit": "77600",
+   "plain_description": "Use of externally generated heat to increase temperature of cancer cell, heating\u2026",
+   "allowed_2024_M": 18.778,
+   "growth_pct": 162.786,
+   "state_hhi": 5454.539,
+   "national_providers": 92,
+   "top10_provider_share": 0.676
+  },
+  {
+   "unit": "J9321",
+   "plain_description": "Injection, epcoritamab-bysp, 0.16 mg",
+   "allowed_2024_M": 17.104,
+   "growth_pct": NaN,
+   "state_hhi": 3369.303,
+   "national_providers": 301,
+   "top10_provider_share": NaN
+  },
+  {
+   "unit": "J1302",
+   "plain_description": "Injection, sutimlimab-jome, 10 mg",
+   "allowed_2024_M": 13.753,
+   "growth_pct": 54.15,
+   "state_hhi": 5060.953,
+   "national_providers": 205,
+   "top10_provider_share": NaN
+  },
+  {
+   "unit": "J1305",
+   "plain_description": "Injection, evinacumab-dgnb, 5mg",
+   "allowed_2024_M": 12.973,
+   "growth_pct": 165.688,
+   "state_hhi": NaN,
+   "national_providers": 61,
+   "top10_provider_share": NaN
+  },
+  {
+   "unit": "J0638",
+   "plain_description": "Injection, canakinumab, 1 mg",
+   "allowed_2024_M": 12.935,
+   "growth_pct": 95.776,
+   "state_hhi": 3332.222,
+   "national_providers": 163,
+   "top10_provider_share": 1.0
+  },
+  {
+   "unit": "0394T",
+   "plain_description": "High dose rate electronic brachytherapy, external",
+   "allowed_2024_M": 12.854,
+   "growth_pct": 65.038,
+   "state_hhi": 3050.092,
+   "national_providers": 148,
+   "top10_provider_share": 0.534
+  },
+  {
+   "unit": "J3055",
+   "plain_description": "Injection, talquetamab-tgvs, 0.25 mg",
+   "allowed_2024_M": 12.188,
+   "growth_pct": NaN,
+   "state_hhi": 2545.52,
+   "national_providers": 245,
+   "top10_provider_share": NaN
+  }
+ ],
+ "class_level_flags_2024": [
+  {
+   "level": "class",
+   "unit": "J9029 (unclassified, own class)",
+   "allowed_2024_M": 21.664,
+   "growth_pct": 1816.257,
+   "state_hhi": 1915.548
+  },
+  {
+   "level": "class",
+   "unit": "J9061 (unclassified, own class)",
+   "allowed_2024_M": 20.408,
+   "growth_pct": 128.967,
+   "state_hhi": 2452.838
+  },
+  {
+   "level": "class",
+   "unit": "77600 (unclassified, own class)",
+   "allowed_2024_M": 18.778,
+   "growth_pct": 162.786,
+   "state_hhi": 5454.539
+  },
+  {
+   "level": "class",
+   "unit": "J1305 (unclassified, own class)",
+   "allowed_2024_M": 12.973,
+   "growth_pct": 165.688,
+   "state_hhi": NaN
+  },
+  {
+   "level": "class",
+   "unit": "J0638 (unclassified, own class)",
+   "allowed_2024_M": 12.935,
+   "growth_pct": 95.776,
+   "state_hhi": 3332.222
+  },
+  {
+   "level": "class",
+   "unit": "0394T (unclassified, own class)",
+   "allowed_2024_M": 12.854,
+   "growth_pct": 65.038,
+   "state_hhi": 3050.092
+  },
+  {
+   "level": "class (exploratory weighted-HHI only)",
+   "unit": "Remote therapeutic monitoring",
+   "allowed_2024_M": 24.164,
+   "growth_pct": 82.995,
+   "state_hhi": 1008.412
+  },
+  {
+   "level": "class (exploratory weighted-HHI only)",
+   "unit": "Skin substitute products",
+   "allowed_2024_M": 10076.732,
+   "growth_pct": 127.125,
+   "state_hhi": 1107.424
+  }
+ ]
+}
+== 09_tradeoff.py
+== 10_master_results.py
+1070 statistics; {'computed': 1051, 'parameter': 9, 'external': 6, 'illustrative': 4}
+== 11_writeup.py
+letter words 695
+paper words 2915 abstract 160
+sgim chars 2239 arm words 419 titles 96 88 93
+== 12_poster.js
+col 1.0 spare -1.40 gap 0.43
+col 16.7 spare 0.73 gap 0.90
+col 32.3 spare -3.03 gap 0.90
+written
+Warning: failed to launch javaldx - java may not function correctly
+== check_numbers.py
+checked 1075 numeric tokens in 6 documents against 1070 master statistics
+RESULT: PASS (0 unmatched)
+done

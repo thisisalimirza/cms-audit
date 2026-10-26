@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite it as below."
+title: "Code Churn and Review Burden in Public-Data Screening of Medicare Part B Spending Surges: reproducibility package"
+authors:
+  - family-names: Mirza
+    given-names: Ali
+    affiliation: "University of Connecticut School of Medicine"
+  # [ALI TO CONFIRM: add coauthor if confirmed]
+version: "0.2.0"
+date-released: "2026-10-26"
+license: MIT
+repository-code: "[ALI TO ADD repository URL]"
+keywords: [Medicare, "Part B", "skin substitutes", "program integrity", screening]
